@@ -1,4 +1,8 @@
 <div>
   <div>Sentiments</div>
-  <ba-am-chart baAmChartClass="dashboard-line-chart" [baAmChartConfiguration]="sentiments" (onChartReady)="initChart($event)"></ba-am-chart>
+  <ba-chartist-chart baChartistChartClass="ct-chart"
+                     baChartistChartType="Line"
+                     [baChartistChartData]="sentiments['simpleLineData']"
+                     [baChartistChartOptions]="sentiments['simpleLineOptions']">
+  </ba-chartist-chart>
 </div>
